@@ -2,9 +2,9 @@
 
 A Tampermonkey userscript that batch-exports PDF.js rendered pages into image-based PDF files.
 
+> ⚠️ This script only exports **image-based PDFs** (text is not selectable). It does **not** bypass passwords, encryption, or server-side permission checks.
+
 > ⚠️ **Before installing, edit the `@match` line in the script header to match your own PDF.js reader URL.** The value in this repo is only an example.
-> ⚠️ This script only exports **image-based PDFs** (text is not selectable).  
-> It does **not** bypass passwords, encryption, or server-side permission checks.
 
 ---
 
