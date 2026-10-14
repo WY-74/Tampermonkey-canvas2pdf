@@ -1,10 +1,13 @@
 // ==UserScript==
-// @name         PDF分批导出(强制总页数)
-// @namespace    http://tampermonkey.net/
-// @version      1.0
-// @description  Tampermonkey-based PDF.js batch export script
+// @name         canvas2pdf
+// @namespace    https://github.com/WY-74/Tampermonkey-canvas2pdf
+// @version      1.0.0
+// @description  A Tampermonkey script for batch exporting PDF.js rendered pages to image-based PDF files.
+// @author       Yun Wang
 // @match        https://example.com/pdf/viewer/*
 // @grant        none
+// @run-at       document-idle
+// @license      MIT
 // ==/UserScript==
 
 /* global PDFViewerApplication */
@@ -138,7 +141,7 @@
         const box = document.createElement('div');
         box.style.cssText = `position:fixed;right:20px;bottom:20px;z-index:99999;background:#fff;border:1px solid #ccc;border-radius:8px;padding:12px;box-shadow:0 2px 10px rgba(0,0,0,.2);font-size:13px;width:260px;`;
         box.innerHTML = `
-            <div style="font-weight:bold;margin-bottom:8px;">PDF导出（最大支持页数 ${TOTAL_PAGES}）</div>
+            <div style="font-weight:bold;margin-bottom:8px;">Canvas2pdf（当前支持最大页数 ${TOTAL_PAGES}）</div>
             <div>起始页：<input id="expStart" type="number" value="1" style="width:60px"></div>
             <div style="margin-top:4px;">结束页：<input id="expEnd" type="number" value="30" style="width:60px"></div>
             <button id="expBtn" style="margin-top:8px;width:100%;padding:6px;background:#1976d2;color:#fff;border:none;border-radius:4px;cursor:pointer;">开始导出本批</button>
